@@ -1,0 +1,415 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.horizontal{
+    margin: 20px auto;
+}
+.nav-bar{
+    background-image: linear-gradient(to right,green,orange);
+    text-align: center;
+}
+
+
+.nav-logo img{
+    width: 90px;
+    height: 60px;
+    border-radius: 10px;
+}
+.heading h1{
+    color: white;
+    margin-top: 10px;
+    
+}
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.nav-menu a{
+ 
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+
+}
+.nav-menu a:hover{
+    background-color: rgb(90, 157, 168);
+    border-radius: 10px;
+}
+
+/* for pc */
+
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+
+/* for mobile */
+
+[class*="col-"]{
+    width: 100%;
+}
+.nav-bar::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* ...................navigation bar ends here.................. */
+
+
+/* ......................profile design starts here................... */
+
+.profile{
+    padding: 170px 10px;
+    text-align: center;
+    position: relative;
+}
+.upper-icon{
+    width: 200px;
+    height: 110px;
+    position: absolute;
+    right: 50px;
+    top: 60px;
+    transition: 2s;
+}
+.upper-icon:hover{
+    transform: scale(1.2);
+    right: 100px;
+}
+
+.profile-info h1{
+    font-family: 'Satisfy', cursive;
+    margin-bottom: 30px;
+    font-size: 3rem;
+    transition: 2s;
+}
+.profile-info h1:hover{
+    transform: scale(1.4);
+}
+p{
+    font-size: 1.2rem;
+}
+
+.lower-icon{
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    left: 50px;
+    bottom: 4px;
+    margin-bottom: 20px;
+    transition: 2s;
+}
+
+.lower-icon:hover{
+    transform: scale(1.2);
+    left: 100px;
+}
+
+.profile::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* ....................profile section design ends here.................. */
+
+
+/* .............About me section starts here............ */
+
+.about-me{
+    background-color: black;
+    color: white;
+    padding: 20px 10px;
+
+}
+.about-me h2{
+    text-align: center;
+    margin: 20px 10px;
+}
+.image-part{
+    text-align: center;
+}
+.my-image{
+    width: 200px;
+    border-radius: 50%; 
+}
+
+.about-me-desc{
+    text-align: center;
+}
+
+.about-me-desc p{
+    font-family: 'Roboto', sans-serif;
+}
+
+.cv-button{
+    padding: 5px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.about-me::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+/* About me section ends here............. */
+
+
+/* professional experience section starts here........ */
+
+.professional-experience{
+    color: white;
+    padding: 10px;
+
+}
+
+.card{
+   background-color:#b1b1b1 ;
+   padding: 10px;
+   margin-top: 10px;
+   border-radius: 10px;
+   transition: 1s;
+}
+
+.card:hover{
+    box-shadow: 4px 6px 6px 4px skyblue;
+}
+
+
+
+.card-icon{
+
+    text-align: center;
+    margin: 10px;
+    
+}
+.card-icon img{
+    width: 100px;
+    border: 3px solid white;
+    border-radius: 50%;
+
+}
+
+.card-title{
+    text-align: center;
+    background-color: rgb(109, 106, 106);
+}
+.card-desc{
+    padding: 20px;
+}
+
+/* .................skill card animation design starts */
+
+.skill li{
+    list-style-type: none;
+    margin: 30px 0px;
+    font-weight: bolder;
+    position: relative;
+
+
+}
+
+.skill li::before{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0px;
+    width: 100%;
+    height: 10px;
+    background-color:wheat;
+    border-radius: 1000px;
+
+}
+
+.skill li::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0px;
+    width:0%;
+    height: 10px;
+    background-color:rgb(59, 207, 59);
+    border-radius: 1000px;
+
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 3;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+}
+
+.skill li.html::after{
+    animation-name: html;
+}
+.skill li.css::after{
+    animation-name: css;
+}
+.skill li.bootstrap::after{
+    animation-name: bootstrap;
+}
+.skill li.js::after{
+    animation-name: js;
+}
+.skill li.c::after{
+    animation-name: c;
+}
+.skill li.java::after{
+    animation-name: java;
+}
+
+
+
+@keyframes html {
+    to{
+        width: 100%;
+    }
+    
+}
+@keyframes css {
+    to{
+        width: 95%;
+    }
+    
+}
+@keyframes bootstrap {
+    to{
+        width: 90%;
+    }
+    
+}
+@keyframes js {
+    to{
+        width: 70%;
+    }
+    
+}
+@keyframes c {
+    to{
+        width: 90%;
+    }
+    
+}
+@keyframes java {
+    to{
+        width: 70%;
+    }
+    
+}
+
+
+.professional-experience::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+/* .........................professional-experience ends here */
+
+
+/*........................ achievement contacts starts here  */
+
+.contacts{
+    background-color: rgb(61, 171, 214);
+}
+
+.achievement{
+    color: white;
+}
+
+.achievement-heading{
+    text-align: center;
+}
+.achievement-desc{
+    margin: 0px 50px;
+}
+.achievement-desc li{
+    margin: 5px 0px;
+}
+
+.contact{
+ text-align: center;
+}
+
+.contact-heading{
+ color: white;
+}
+
+.contact input,textarea{
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+    resize: none;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+}
+.contact button{
+    background-color: #052d2f;
+    color: white;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    border: none;
+    width: 100px;
+    
+}
+
+/* working on media buttons */
+
+.contact-links{
+    text-align: center;
+    color: white;
+
+}
+.media-buttons .btn{
+    padding: 10px 15px;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+   
+}
+
+.contacts::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+/* ...................achievement contact ends here  */
+
+
+/* footer section design starts here  */
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.footer-menu a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 15px;
+    font-size: 1.2rem;
+}
+.footer-menu a:hover{
+    color: gray;
+}
+
+
+footer::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+
+/* footer design ends here  */
